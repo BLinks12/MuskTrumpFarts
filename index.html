@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>116 114 117 109 112</title>
+    <title>MuskTrumpFarts (MTF)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
     <style>
         * {
             font-family: "Lexend Giga", serif;
@@ -19,16 +19,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            height: 100vh;
+            justify-content: flex-start;
+            min-height: 100vh;
             margin: 0;
-            
+            padding: 20px;
         }
 
         .container {
             width: 80%;
-           
             text-align: center;
+            margin-top: 20px;
         }
 
         textarea, pre {
@@ -69,10 +69,12 @@
             border: none;
             cursor: pointer;
             font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
         }
 
         button:hover {
             background-color: #555;
+            transform: scale(1.05);
         }
 
         .ASCII-art {
@@ -157,9 +159,36 @@
         .copy-button:hover {
             background-color: #444;
         }
+
+        /* Phantom Wallet Button */
+        .wallet-connect button {
+            background-color: #00ff66;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-bottom: 20px;
+        }
+
+        .wallet-connect button:hover {
+            background-color: #33ff99;
+            transform: scale(1.05);
+        }
+
+        .wallet-address {
+            font-size: 0.9em;
+            color: #00ff66;
+            opacity: 0.9;
+            word-break: break-all;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
+    <!-- Copy to Clipboard Container -->
     <div class="copy-container">
         <input type="text" class="copy-input" value="G94cy4Z2J88xvbjktaZb5CXjQDc2pVSjdHtEweqypump" readonly>
         <button class="copy-button" onclick="copyText()">
@@ -169,10 +198,19 @@
             </svg>
         </button>
     </div>
-    <a href="https://x.com/1161141171O9" target="_blank" class="twitter-link">
-       
-       x.com
+
+    <!-- Twitter (X) Link -->
+    <a href="https://x.com/YourProfile" target="_blank" class="twitter-link">
+        Follow Us on X
     </a>
+
+    <!-- Wallet Connect Section -->
+    <div class="wallet-connect">
+        <button id="connect-wallet">CONNECT WALLET</button>
+        <div id="wallet-address" class="wallet-address"></div>
+    </div>
+
+    <!-- Main Container -->
     <div class="container">
         <p class="ASCII-art">
             ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⡀⢠⣀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -182,36 +220,28 @@
             ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⢧⠖⠀⠀⠀⠀⠀⠀⠈⠑⠀⠀⠀⠐⡄⠀⠀⠀⠀⠀⠀⠀⠉⠒⠄⠀⠒⠐⠒⢤⠙⠂⠀⠀⠀⠀⠀⠀⠀⠀
             ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣷⣾⠰⡀⠀⠀⠀⠀⠂⠀⠀⠈⠒⠦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠒⠄⠀⠒⠐⠒⢤⠙⠂⠀⠀⠀⠀⠀⠀⠀⠀
             ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⡿⣶⣦⢂⠘⠘⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠲⡀⠐⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⢏⠁⢹⣯⣻⣧⠀⠙⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠆⠀⠀⠀⠀⠀⠀⠁⠒⠶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⢏⠁⢹⣯⣻⣧⠀⠙⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠆⠀⠀⠀⠀⠀⠀⠁⠒⠶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
             ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣯⣿⠂⠀⢻⣳⡝⠷⣄⡈⢱⡘⡂⢀⣀⠄⠀⠀⡀⠀⠀⠘⢂⣀⠲⠖⠀⣀⡀⠀⠀⢰⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣾⡇⠀⠀⠈⠓⠙⢲⣬⡙⠲⣝⣮⡙⠻⣷⣂⠀⣈⠂⠤⢄⡀⠈⠙⠒⢖⡒⠹⣯⡀⢬⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣷⣯⡴⠀⠀⠀⡀⠀⠛⢿⣿⡷⣽⣒⡬⠯⢝⣛⠷⠢⢴⠦⠄⡀⠨⢈⣩⣽⡟⣿⣾⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⡶⢿⠟⠱⠁⠀⠀⣽⡦⠤⢤⣝⠿⣷⣦⣉⡓⣀⢍⡙⣷⣄⡴⠛⣡⡖⠋⡙⢿⣇⣿⠏⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡿⣛⣤⠀⠀⠀⠀⠈⣯⣶⣦⣌⣋⢈⣉⣩⣿⣿⣿⣿⣿⣾⣤⣴⣷⣶⣷⣿⢸⣿⣋⡔⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣷⢹⡿⠀⠀⠀⠀⠀⠙⠻⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⡿⣿⠏⢸⣿⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡾⢷⣤⠀⠀⠀⠀⠀⠀⠈⠉⠉⣹⣿⣿⣿⣯⠀⠸⣿⣿⣿⠿⢶⣞⣵⠀⡼⢹⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⡬⢿⡆⠀⠀⠀⠀⠀⠀⠀⠛⠋⢻⢇⣿⣯⡄⠀⣉⠻⠽⠛⠛⠉⠀⢰⡷⣾⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢋⡾⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⢹⡀⠀⣿⣦⠀⠀⠀⣀⣶⠟⣰⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣾⡇⠀⠀⠈⠓⠙⢲⣬⡙⠲⣝⣮⡙⠻⣷⣦⣉⡓⣀⢍⡙⣷⣄⡴⠛⣡⡖⠋⡙⢿⣇⣿⠏⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡿⣛⣤⠀⠀⠀⠀⡀⠀⠛⢿⣿⡷⣽⣒⡬⠯⢝⣛⠷⠢⢴⠦⠄⡀⠨⢈⣩⣽⡟⣿⣾⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣷⢹⡿⠀⠀⠀⠀⠀⠙⠻⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⡿⣿⠏⢸⣿⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⡬⢿⡆⠀⠀⠀⠀⠀⠀⠈⠉⠉⣹⣿⣿⣿⣯⠀⠸⣿⣿⣿⠿⢶⣞⣵⠀⡼⢹⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢋⡾⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⢹⡀⠀⣿⣦⠀⠀⠀⣀⣶⠟⣰⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
             ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣶⣿⣿⣿⣿⡇⢹⣷⡀⠀⠀⠀⠀⠀⣀⡄⣻⠻⡿⢿⣖⣷⡟⠨⢿⣦⡬⠁⠀⢻⡧⣤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⢻⣷⡄⠀⠀⢀⣰⠏⢸⠯⠤⠾⢀⣿⠏⠀⠀⠀⠻⣄⠀⡀⣼⠇⠀⠈⠉⠙⠳⠶⢤⣄⣀⡀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⢀⣀⣤⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀⠻⣿⣤⠀⠈⠁⣤⡷⠶⠶⣤⣾⣷⠶⣶⣖⠿⣶⡌⡄⣸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠛⠳⠦
-            ⠀⠀⣀⣤⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠈⢿⣧⠀⠘⠁⠀⠀⠀⠰⣾⣿⡿⠿⠿⠟⠻⣷⣿⡏⢙⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-            ⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀⠙⠷⣶⣤⡀⠀⠀⢸⣦⡡⠠⢄⣀⣠⠶⠋⢹⡇⢸⡏⠖⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠈⢻⣝⣠⣤⣾⣿⣿⣿⠾⠝⡏⠀⠀⠈⡇⠘⢱⡆⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⢀⣰
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠉⢉⣿⣿⣭⡉⠀⠀⢰⠁⠀⠀⠀⣇⠀⢸⣷⠀⠀⠀⠘⠀⠀⠀⠀⠀⣶⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⡷⣄⠁⠀⠀⠀⠀⣿⠀⢸⣯⡷⣶⡀⠀⠀⠀⠀⠀⣼⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⢀⡴⠊⣇⠉⢻⣿⣿⣿⡟⠁⠈⠛⢦⡀⠀⠀⢻⠀⢸⣿⣿⣷⡏⠻⣆⠀⢠⣾⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠉⠀⠀⠿⠀⢠⣿⣿⣿⡐⠛⠉⠉⠉⠉⠃⠀⢸⡆⢸⣿⣿⣿⡷⣤⢹⣧⢀⣟⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⠀⢸⡇⢸⣿⣿⣿⡏⣷⠞⠹⢿⣿⣿⣷⣯⣯
-            </p>
-        <h1>116 114 117 109 112</h1>
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⢀⡴⠊⣇⠉⢻⣿⣿⣿⡟⠁⠈⠛⢦⡀⠀⠀⢻⠀⢸⣿⣿⣿⡷⣤⢹⣧⢀⣟⣿⣿⣿⣿
+            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠉⠀⠀⠿⠀⢠⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⢸⡆⢸⣿⣿⣿⡏⣷⠞⠹⢿⣿⣿⣷⣯⣯
+            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⢀⡴⠊⣇⠉⢻⣿⣿⣿⡟⠁⠈⠛⢦⡀⠀⠀⢻⠀⢸⣿⣿⣿⡷⣤⢹⣧⢀⣟⣿⣿⣿⣿
+        </p>
+        <h1>MuskTrumpFarts (MTF)</h1>
         <textarea id="inputText" placeholder="Enter ASCII codes"></textarea>
         <button onclick="convertToASCII()">Convert to ASCII</button>
         <button onclick="convertFromASCII()">Convert from ASCII</button>
         <pre id="output"></pre>
     </div>
 
+    <!-- JavaScript Functions -->
     <script>
+        // Function to convert text to ASCII codes
         function convertToASCII() {
             const inputText = document.getElementById('inputText').value;
             const output = Array.from(inputText)
@@ -220,24 +250,30 @@
             document.getElementById('output').textContent = output;
         }
 
+        // Function to convert ASCII codes to text
         function convertFromASCII() {
             const inputText = document.getElementById('inputText').value;
             const output = inputText
                 .split(' ')
-                .map(code => String.fromCharCode(parseInt(code)))
+                .map(code => {
+                    const parsed = parseInt(code);
+                    return isNaN(parsed) ? '' : String.fromCharCode(parsed);
+                })
                 .join('');
             document.getElementById('output').textContent = output;
         }
 
+        // Function to copy the wallet address to clipboard
         function copyText() {
             const input = document.querySelector('.copy-input');
             input.select();
             document.execCommand('copy');
             
-            // Visual feedback
+            // Visual feedback: Change button icon to a checkmark
             const button = document.querySelector('.copy-button');
             button.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>';
             
+            // Revert the icon back after 1 second
             setTimeout(() => {
                 button.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
             }, 1000);
